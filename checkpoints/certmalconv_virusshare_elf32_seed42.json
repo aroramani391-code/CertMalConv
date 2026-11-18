@@ -1,0 +1,16 @@
+{
+  "model_id": "certmalconv_virusshare_elf32_seed42",
+  "dataset": "virusshare_elf32",
+  "platform": "ELF-32",
+  "seed": 42,
+  "epoch": 51,
+  "sha256": "a19d2d976fcb58a0d1df8432bc051169af4071bc911f238332589f66360ccf84",
+  "config": "configs/model/certmalconv.yaml",
+  "val_f1": 97.77,
+  "val_cdr": 81.91,
+  "zenodo_url": "https://zenodo.org/records/14258123/files/certmalconv_virusshare_elf32_seed42.pt",
+  "size_bytes": 11004232,
+  "framework": "pytorch-2.3.1",
+  "cuda": "12.1",
+  "training_hours": 2.96
+}

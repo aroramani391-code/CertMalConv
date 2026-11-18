@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the companion journal article."
+title: "CertMalConv: Efficient and Certifiably Robust Deep Learning for Multi-modal Malware Detection and Classification"
+abstract: >-
+  Reference implementation, trained-model checkpoints, verification harness
+  and experimental scripts for CertMalConv, a multi-modal malware detector
+  whose malicious verdicts carry a deterministic certificate against coupled
+  problem-space edits.
+type: software
+version: "0.3.2"
+date-released: "2026-11-02"
+license: MIT
+repository-code: "https://github.com/certmalconv/certmalconv"
+url: "https://certmalconv.github.io"
+authors:
+  - given-names: "First A."
+    family-names: "Author"
+    affiliation: "Author Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0001"
+  - given-names: "Second B."
+    family-names: "Author"
+    affiliation: "Author Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0002"
+  - given-names: "Third C."
+    family-names: "Author"
+    affiliation: "Author Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0003"
+preferred-citation:
+  type: article
+  title: "Efficient and Certifiably Robust Deep Learning for Multi-modal Malware Detection and Classification"
+  authors:
+    - given-names: "First A."
+      family-names: "Author"
+    - given-names: "Second B."
+      family-names: "Author"
+    - given-names: "Third C."
+      family-names: "Author"
+  journal: "IEEE Transactions on Dependable and Secure Computing"
+  year: 2026
+  doi: "10.1109/TDSC.2026.XXXXXXX"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14258123"
+    description: "Zenodo archive of code and model checkpoints"
+keywords:
+  - "malware detection"
+  - "certified robustness"
+  - "multi-modal learning"
+  - "content-defined chunking"
+  - "attributed control-flow graph"
+  - "adversarial examples"

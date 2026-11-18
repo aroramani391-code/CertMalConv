@@ -1,0 +1,16 @@
+{
+  "model_id": "certmalconv_virusshare_pe64_seed2025",
+  "dataset": "virusshare_pe64",
+  "platform": "PE-64",
+  "seed": 2025,
+  "epoch": 38,
+  "sha256": "013366aa45357b8a1c634d6e5aed784945d1a7f1a7ede58b94ded815a24c1d7d",
+  "config": "configs/model/certmalconv.yaml",
+  "val_f1": 98.48,
+  "val_cdr": 82.14,
+  "zenodo_url": "https://zenodo.org/records/14258123/files/certmalconv_virusshare_pe64_seed2025.pt",
+  "size_bytes": 10996956,
+  "framework": "pytorch-2.3.1",
+  "cuda": "12.1",
+  "training_hours": 3.19
+}

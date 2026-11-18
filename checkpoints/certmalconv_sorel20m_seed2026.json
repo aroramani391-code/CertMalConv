@@ -1,0 +1,16 @@
+{
+  "model_id": "certmalconv_sorel20m_seed2026",
+  "dataset": "sorel20m",
+  "platform": "PE-32",
+  "seed": 2026,
+  "epoch": 48,
+  "sha256": "26f6ecf21e19ea35da6a29fc02e0e4d8ed5a816246cff19fe3065aef33d8963b",
+  "config": "configs/model/certmalconv.yaml",
+  "val_f1": 99.05,
+  "val_cdr": 83.8,
+  "zenodo_url": "https://zenodo.org/records/14258123/files/certmalconv_sorel20m_seed2026.pt",
+  "size_bytes": 11114818,
+  "framework": "pytorch-2.3.1",
+  "cuda": "12.1",
+  "training_hours": 3.01
+}

@@ -1,0 +1,12 @@
+name: malformer
+status: R
+version: v1.0
+parameters_m: 12.74
+reference: "S. Howard et al., arXiv:2608.19052, 2026"
+upstream: https://github.com/sam-malformer/malformer
+hyperparameters: "Transformer; AdamW, lr 5e-5"
+preprocessing: Radare2 5.8
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

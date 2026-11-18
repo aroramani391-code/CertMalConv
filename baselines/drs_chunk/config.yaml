@@ -1,0 +1,12 @@
+name: drs_chunk
+status: I
+version: v1.0
+parameters_m: 1.14
+reference: "D. Gibert et al., arXiv:2405.00392, 2024"
+upstream: https://github.com/danielgibert/drs-chunk
+hyperparameters: "Chunk 256 B, votes = 15"
+preprocessing: None
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

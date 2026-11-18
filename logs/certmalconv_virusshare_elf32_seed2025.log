@@ -1,0 +1,62 @@
+2026-07-15 12:52:04 INFO     certmalconv.training.train | Training dataset=virusshare_elf32 seed=2025 for 60 epochs
+2026-07-15 12:52:04 INFO     certmalconv.training.train | Device: cuda:0 (NVIDIA A100-SXM4-40GB), driver 535.86, CUDA 12.1
+2026-07-15 12:52:04 INFO     certmalconv.training.train | Model params: 2,733,888  |  Config SHA: 511fca4dd431
+2026-07-15 12:52:04 INFO     certmalconv.training.train | Train/val/test: 11881/2692/2688
+2026-07-15 12:52:04 INFO     certmalconv.training.train | Warm-up 5 epochs, ramp 25 epochs, rho_max=8
+2026-07-15 12:55:10 INFO     certmalconv.training.train | epoch   1/60  rho_0=0  train_loss=1.6088  val_f1=51.5931  val_cdr=2.5092  theta=1.4571  theta_g=0.9019  lr=1.00e-04
+2026-07-15 12:58:16 INFO     certmalconv.training.train | epoch   2/60  rho_0=0  train_loss=1.5820  val_f1=52.9184  val_cdr=4.5861  theta=1.5932  theta_g=0.8717  lr=1.00e-04
+2026-07-15 13:01:22 INFO     certmalconv.training.train | epoch   3/60  rho_0=0  train_loss=1.5396  val_f1=54.1368  val_cdr=6.2896  theta=1.4452  theta_g=0.9075  lr=1.00e-04
+2026-07-15 13:04:28 INFO     certmalconv.training.train | epoch   4/60  rho_0=0  train_loss=1.5070  val_f1=55.6403  val_cdr=9.3870  theta=1.5978  theta_g=0.8815  lr=1.00e-04
+2026-07-15 13:07:34 INFO     certmalconv.training.train | epoch   5/60  rho_0=0  train_loss=1.4578  val_f1=56.5953  val_cdr=11.8258  theta=1.5310  theta_g=0.9138  lr=1.00e-04
+2026-07-15 13:07:34 INFO     certmalconv.training.calibration | Calibrated thresholds on D_cal: theta=1.5310, theta_g=0.9138, cal_fpr=0.0500%
+2026-07-15 13:10:40 INFO     certmalconv.training.train | epoch   6/60  rho_0=0  train_loss=1.4144  val_f1=57.9787  val_cdr=13.6734  theta=1.4711  theta_g=0.9187  lr=1.00e-04
+2026-07-15 13:13:46 INFO     certmalconv.training.train | epoch   7/60  rho_0=0  train_loss=1.3412  val_f1=59.3516  val_cdr=17.2415  theta=1.4665  theta_g=0.8799  lr=1.00e-04
+2026-07-15 13:16:52 INFO     certmalconv.training.train | epoch   8/60  rho_0=0  train_loss=1.3169  val_f1=60.9142  val_cdr=18.7137  theta=1.5871  theta_g=0.9036  lr=1.00e-04
+2026-07-15 13:19:58 INFO     certmalconv.training.train | epoch   9/60  rho_0=1  train_loss=1.2708  val_f1=62.2388  val_cdr=20.8305  theta=1.5495  theta_g=0.9192  lr=1.00e-04
+2026-07-15 13:23:04 INFO     certmalconv.training.train | epoch  10/60  rho_0=1  train_loss=1.1956  val_f1=63.9520  val_cdr=22.8903  theta=1.5383  theta_g=0.8952  lr=1.00e-04
+2026-07-15 13:26:10 INFO     certmalconv.training.train | epoch  11/60  rho_0=1  train_loss=1.1623  val_f1=65.1719  val_cdr=25.5088  theta=1.5760  theta_g=0.9050  lr=1.00e-04
+2026-07-15 13:29:16 INFO     certmalconv.training.train | epoch  12/60  rho_0=2  train_loss=1.1428  val_f1=66.2421  val_cdr=28.1394  theta=1.4137  theta_g=0.8794  lr=1.00e-04
+2026-07-15 13:32:22 INFO     certmalconv.training.train | epoch  13/60  rho_0=2  train_loss=1.0854  val_f1=67.7549  val_cdr=30.6252  theta=1.5644  theta_g=0.9108  lr=1.00e-04
+2026-07-15 13:35:28 INFO     certmalconv.training.train | epoch  14/60  rho_0=2  train_loss=1.0771  val_f1=69.1029  val_cdr=33.2554  theta=1.5640  theta_g=0.9108  lr=1.00e-04
+2026-07-15 13:38:34 INFO     certmalconv.training.train | epoch  15/60  rho_0=3  train_loss=1.0328  val_f1=70.6396  val_cdr=34.7939  theta=1.5903  theta_g=0.9235  lr=1.00e-04
+2026-07-15 13:41:40 INFO     certmalconv.training.train | epoch  16/60  rho_0=3  train_loss=0.9758  val_f1=72.1362  val_cdr=36.7806  theta=1.4072  theta_g=0.8987  lr=1.00e-04
+2026-07-15 13:44:46 INFO     certmalconv.training.train | epoch  17/60  rho_0=3  train_loss=0.9253  val_f1=73.1020  val_cdr=40.4649  theta=1.4478  theta_g=0.8922  lr=1.00e-04
+2026-07-15 13:47:52 INFO     certmalconv.training.train | epoch  18/60  rho_0=4  train_loss=0.8912  val_f1=74.5673  val_cdr=42.5684  theta=1.4109  theta_g=0.8954  lr=1.00e-04
+2026-07-15 13:50:58 INFO     certmalconv.training.train | epoch  19/60  rho_0=4  train_loss=0.8132  val_f1=75.6842  val_cdr=43.9514  theta=1.5663  theta_g=0.9155  lr=1.00e-04
+2026-07-15 13:54:04 INFO     certmalconv.training.train | epoch  20/60  rho_0=4  train_loss=0.8041  val_f1=77.5306  val_cdr=46.3427  theta=1.5507  theta_g=0.8789  lr=1.00e-04
+2026-07-15 13:57:10 INFO     certmalconv.training.train | epoch  21/60  rho_0=5  train_loss=0.7694  val_f1=78.5921  val_cdr=48.1727  theta=1.4881  theta_g=0.8854  lr=1.00e-04
+2026-07-15 14:00:16 INFO     certmalconv.training.train | epoch  22/60  rho_0=5  train_loss=0.6940  val_f1=79.8598  val_cdr=51.2548  theta=1.4401  theta_g=0.9031  lr=1.00e-04
+2026-07-15 14:03:22 INFO     certmalconv.training.train | epoch  23/60  rho_0=5  train_loss=0.6351  val_f1=81.3787  val_cdr=52.6536  theta=1.4510  theta_g=0.8970  lr=1.00e-04
+2026-07-15 14:06:28 INFO     certmalconv.training.train | epoch  24/60  rho_0=6  train_loss=0.6065  val_f1=82.5018  val_cdr=56.7294  theta=1.4721  theta_g=0.9061  lr=1.00e-04
+2026-07-15 14:09:34 INFO     certmalconv.training.train | epoch  25/60  rho_0=6  train_loss=0.5640  val_f1=84.3722  val_cdr=58.8374  theta=1.4379  theta_g=0.9267  lr=1.00e-04
+2026-07-15 14:12:40 INFO     certmalconv.training.train | epoch  26/60  rho_0=6  train_loss=0.5372  val_f1=85.7293  val_cdr=60.5978  theta=1.5211  theta_g=0.8812  lr=1.00e-04
+2026-07-15 14:15:46 INFO     certmalconv.training.train | epoch  27/60  rho_0=7  train_loss=0.5221  val_f1=86.8648  val_cdr=63.4655  theta=1.4421  theta_g=0.8711  lr=1.00e-04
+2026-07-15 14:18:52 INFO     certmalconv.training.train | epoch  28/60  rho_0=7  train_loss=0.4532  val_f1=88.1524  val_cdr=64.1983  theta=1.4079  theta_g=0.9034  lr=1.00e-04
+2026-07-15 14:21:58 INFO     certmalconv.training.train | epoch  29/60  rho_0=7  train_loss=0.3870  val_f1=89.6181  val_cdr=67.0151  theta=1.4102  theta_g=0.9199  lr=1.00e-04
+2026-07-15 14:25:04 INFO     certmalconv.training.train | epoch  30/60  rho_0=8  train_loss=0.3916  val_f1=91.1787  val_cdr=70.3815  theta=1.4070  theta_g=0.8836  lr=1.00e-04
+2026-07-15 14:28:10 INFO     certmalconv.training.train | epoch  31/60  rho_0=8  train_loss=0.3305  val_f1=92.1382  val_cdr=71.9363  theta=1.4772  theta_g=0.9247  lr=1.00e-04
+2026-07-15 14:31:16 INFO     certmalconv.training.train | epoch  32/60  rho_0=8  train_loss=0.2836  val_f1=93.6030  val_cdr=74.9521  theta=1.4381  theta_g=0.9256  lr=1.00e-04
+2026-07-15 14:34:22 INFO     certmalconv.training.train | epoch  33/60  rho_0=8  train_loss=0.2542  val_f1=94.9312  val_cdr=76.1073  theta=1.5990  theta_g=0.8777  lr=1.00e-04
+2026-07-15 14:37:28 INFO     certmalconv.training.train | epoch  34/60  rho_0=8  train_loss=0.2194  val_f1=96.5492  val_cdr=78.9238  theta=1.5427  theta_g=0.8773  lr=1.00e-04
+2026-07-15 14:40:34 INFO     certmalconv.training.train | epoch  35/60  rho_0=8  train_loss=0.1488  val_f1=97.9371  val_cdr=81.3977  theta=1.4535  theta_g=0.9049  lr=1.00e-04
+2026-07-15 14:43:40 INFO     certmalconv.training.train | epoch  36/60  rho_0=8  train_loss=0.1407  val_f1=97.8345  val_cdr=81.3153  theta=1.4489  theta_g=0.9054  lr=1.00e-04
+2026-07-15 14:46:46 INFO     certmalconv.training.train | epoch  37/60  rho_0=8  train_loss=0.1381  val_f1=97.6979  val_cdr=80.5097  theta=1.4524  theta_g=0.8731  lr=1.00e-04
+2026-07-15 14:49:52 INFO     certmalconv.training.train | epoch  38/60  rho_0=8  train_loss=0.1487  val_f1=97.5378  val_cdr=81.1627  theta=1.5582  theta_g=0.8862  lr=1.00e-04
+2026-07-15 14:52:58 INFO     certmalconv.training.train | epoch  39/60  rho_0=8  train_loss=0.1637  val_f1=98.0935  val_cdr=82.1533  theta=1.5106  theta_g=0.9025  lr=1.00e-04
+2026-07-15 14:56:04 INFO     certmalconv.training.train | epoch  40/60  rho_0=8  train_loss=0.1227  val_f1=97.8215  val_cdr=80.7881  theta=1.4217  theta_g=0.8851  lr=1.00e-04
+2026-07-15 14:59:10 INFO     certmalconv.training.train | epoch  41/60  rho_0=8  train_loss=0.1372  val_f1=97.6716  val_cdr=80.4401  theta=1.5403  theta_g=0.9166  lr=1.00e-04
+2026-07-15 15:02:16 INFO     certmalconv.training.train | epoch  42/60  rho_0=8  train_loss=0.1672  val_f1=98.1074  val_cdr=81.2395  theta=1.5180  theta_g=0.8800  lr=1.00e-04
+2026-07-15 15:05:22 INFO     certmalconv.training.train | epoch  43/60  rho_0=8  train_loss=0.1624  val_f1=98.1062  val_cdr=80.7719  theta=1.5887  theta_g=0.9089  lr=1.00e-04
+2026-07-15 15:08:28 INFO     certmalconv.training.train | epoch  44/60  rho_0=8  train_loss=0.1569  val_f1=98.0773  val_cdr=81.6141  theta=1.5763  theta_g=0.8948  lr=1.00e-04
+2026-07-15 15:11:34 INFO     certmalconv.training.train | epoch  45/60  rho_0=8  train_loss=0.1676  val_f1=97.9941  val_cdr=82.1253  theta=1.5881  theta_g=0.9180  lr=1.00e-04
+2026-07-15 15:14:40 INFO     certmalconv.training.train | epoch  46/60  rho_0=8  train_loss=0.1497  val_f1=97.6059  val_cdr=80.9396  theta=1.4686  theta_g=0.8739  lr=1.00e-04
+2026-07-15 15:17:46 INFO     certmalconv.training.train | epoch  47/60  rho_0=8  train_loss=0.1670  val_f1=98.0430  val_cdr=82.3015  theta=1.5307  theta_g=0.8945  lr=1.00e-04
+2026-07-15 15:20:52 INFO     certmalconv.training.train | epoch  48/60  rho_0=8  train_loss=0.1479  val_f1=97.7406  val_cdr=80.7835  theta=1.4238  theta_g=0.8938  lr=1.00e-04
+2026-07-15 15:23:58 INFO     certmalconv.training.train | epoch  49/60  rho_0=8  train_loss=0.1480  val_f1=97.6814  val_cdr=81.3322  theta=1.5197  theta_g=0.8747  lr=1.00e-04
+2026-07-15 15:27:04 INFO     certmalconv.training.train | epoch  50/60  rho_0=8  train_loss=0.1371  val_f1=97.8682  val_cdr=81.1575  theta=1.4072  theta_g=0.9242  lr=1.00e-04
+2026-07-15 15:30:10 INFO     certmalconv.training.train | epoch  51/60  rho_0=8  train_loss=0.1396  val_f1=98.0846  val_cdr=80.4806  theta=1.4519  theta_g=0.8827  lr=1.00e-04
+2026-07-15 15:33:16 INFO     certmalconv.training.train | epoch  52/60  rho_0=8  train_loss=0.1503  val_f1=97.8167  val_cdr=82.2091  theta=1.5038  theta_g=0.9189  lr=1.00e-04
+2026-07-15 15:36:22 INFO     certmalconv.training.train | epoch  53/60  rho_0=8  train_loss=0.1306  val_f1=97.8879  val_cdr=81.3702  theta=1.5793  theta_g=0.9137  lr=1.00e-04
+2026-07-15 15:36:37 INFO     certmalconv.training.train | Early stopping at epoch 53 (no improvement in val_cdr for 10 epochs)
+2026-07-15 15:58:04 INFO     certmalconv.training.train | Best checkpoint: epoch 42, val_f1=98.1074, val_cdr=81.2395
+2026-07-15 15:58:04 INFO     certmalconv.training.train | Saved checkpoint: checkpoints/certmalconv_virusshare_elf32_seed2025.pt (11,970,157 B)

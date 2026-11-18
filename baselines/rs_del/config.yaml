@@ -1,0 +1,12 @@
+name: rs_del
+status: R
+version: v1.0
+parameters_m: 1.14
+reference: "Z. Huang et al., NeurIPS 2023"
+upstream: https://github.com/dovermore/rs-del
+hyperparameters: "Deletion p = 0.95, 100 draws"
+preprocessing: None
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

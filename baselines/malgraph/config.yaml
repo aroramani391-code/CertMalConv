@@ -1,0 +1,12 @@
+name: malgraph
+status: R
+version: v1.1
+parameters_m: 3.42
+reference: "X. Ling et al., INFOCOM 2022"
+upstream: https://github.com/MalGraph-INFOCOM2022/MalGraph
+hyperparameters: "Default; AdamW, lr 2e-4"
+preprocessing: Ghidra 11.0
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

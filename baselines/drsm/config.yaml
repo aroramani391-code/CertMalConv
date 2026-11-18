@@ -1,0 +1,12 @@
+name: drsm
+status: R
+version: v1.0
+parameters_m: 1.14
+reference: "S. Saha et al., ICLR 2024"
+upstream: https://github.com/UMBC-DREAM-Lab/DRSM
+hyperparameters: "Window 256 B, 50% ablation"
+preprocessing: None
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

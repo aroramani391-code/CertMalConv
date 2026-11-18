@@ -1,0 +1,12 @@
+name: miracle
+status: I
+version: v1.0
+parameters_m: 0.83
+reference: "I. Alam et al., DMKD 2025"
+upstream: https://github.com/mirror-miracle/MIRACLE
+hyperparameters: "Original paper; SGD, lr 5e-3"
+preprocessing: Image reshape
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

@@ -1,0 +1,12 @@
+name: malconv2
+status: R
+version: v2.0
+parameters_m: 1.14
+reference: "E. Raff et al., AAAI 2021"
+upstream: https://github.com/NeuromorphicComputationResearchProgram/MalConv2
+hyperparameters: "Default; AdamW, lr 1e-4, batch 16"
+preprocessing: None
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

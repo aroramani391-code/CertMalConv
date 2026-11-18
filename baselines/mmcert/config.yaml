@@ -1,0 +1,12 @@
+name: mmcert
+status: R
+version: v1.0
+parameters_m: 4.32
+reference: "Y. Wang et al., CVPR 2024"
+upstream: https://github.com/yangbaixiong/MMCert
+hyperparameters: "Sub-sampling N = 200"
+preprocessing: Radare2 5.8
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+learning_rate: 1.0e-4
+epochs: 60

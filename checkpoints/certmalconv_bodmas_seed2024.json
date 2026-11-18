@@ -1,0 +1,16 @@
+{
+  "model_id": "certmalconv_bodmas_seed2024",
+  "dataset": "bodmas",
+  "platform": "PE-32",
+  "seed": 2024,
+  "epoch": 53,
+  "sha256": "1ea8a7e7f4740f3ae3ddc6667523aa930841c97cb56497f8908079b51137a407",
+  "config": "configs/model/certmalconv.yaml",
+  "val_f1": 99.47,
+  "val_cdr": 86.9,
+  "zenodo_url": "https://zenodo.org/records/14258123/files/certmalconv_bodmas_seed2024.pt",
+  "size_bytes": 11047727,
+  "framework": "pytorch-2.3.1",
+  "cuda": "12.1",
+  "training_hours": 3.25
+}

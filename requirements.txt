@@ -1,0 +1,45 @@
+# Core deep-learning stack ---------------------------------------------------
+torch==2.3.1
+torch-geometric==2.5.3
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+
+# Scientific stack -----------------------------------------------------------
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+scikit-learn==1.5.0
+statsmodels==0.14.2
+
+# Binary parsing and disassembly ---------------------------------------------
+lief==0.14.1
+capstone==5.0.1
+pefile==2024.8.26
+pyelftools==0.31
+
+# Hashing, deduplication, labelling ------------------------------------------
+python-tlsh==4.5.0
+ssdeep==3.4.1
+avclass==2.1.0
+xxhash==3.4.1
+
+# Plotting / figure regeneration ---------------------------------------------
+matplotlib==3.9.0
+seaborn==0.13.2
+pyyaml==6.0.1
+tqdm==4.66.4
+rich==13.7.1
+
+# Logging, config, experiment tracking ---------------------------------------
+hydra-core==1.3.2
+omegaconf==2.3.0
+tensorboard==2.17.0
+wandb==0.17.4
+
+# Dev extras (install with pip install -e ".[dev]") --------------------------
+# pytest==8.2.2
+# pytest-cov==5.0.0
+# ruff==0.4.9
+# black==24.4.2
+# mypy==1.10.0
+# pre-commit==3.7.1

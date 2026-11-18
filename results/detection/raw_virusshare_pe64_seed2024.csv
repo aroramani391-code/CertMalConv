@@ -1,0 +1,6 @@
+metric,value
+acc,98.7890
+f1,98.7590
+auc,98.8034
+tpr_at_1pct_fpr,97.5090
+tpr_at_0_1pct_fpr,96.3890

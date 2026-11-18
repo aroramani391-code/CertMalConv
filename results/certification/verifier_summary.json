@@ -1,0 +1,21 @@
+{
+  "total_trials": 19500,
+  "violations": 0,
+  "max_observed_over_bound": 1.0,
+  "wall_clock_hours": 2.73,
+  "harness_version": "0.3.2",
+  "gear_table_seed": "0xC3A4B1E2",
+  "window": 64,
+  "cut_bits": 11,
+  "trials_per_family": {
+    "test_binaries_single_insertion": 2400,
+    "test_binaries_replacements": 2400,
+    "test_binaries_overlapping_zones": 1200,
+    "test_binaries_edits_at_cut_boundaries": 1800,
+    "test_binaries_append": 1200,
+    "random_bytes": 5000,
+    "adversarial_dense_cuts": 3000,
+    "planted_dense_segments": 2500
+  },
+  "note": "verifier_log.csv contains a 1000-row representative sample; the full log is available via Zenodo (DOI 10.5281/zenodo.14258123) under verifier_log_full.csv.gz (14 MB)."
+}

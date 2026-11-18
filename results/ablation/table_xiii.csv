@@ -1,0 +1,11 @@
+Variant,F1,TPR@0.1%,CDR s=1,CDR s=2
+w/o byte view,97.42,92.37,81.63,72.84
+w/o structure view,96.84,91.63,80.42,71.26
+Concatenation instead of gate,98.74,95.18,84.72,76.38
+Single decoding mode,98.63,94.84,83.47,75.18
+BCE on S_k instead of L_cert,98.37,93.72,68.42,42.16
+Fixed-size chunks,98.27,92.84,45.82,18.37
+CDC with min/max unit sizes,98.52,93.68,72.48,54.26
+w/o global branch,97.84,94.37,86.14,78.52
+w/o hard-unit mining,98.18,93.42,82.37,73.84
+Full CertMalConv,99.46,97.09,88.47,82.14

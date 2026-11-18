@@ -1,0 +1,6 @@
+Test set,DSMalConv,CertMalConv same,CertMalConv held out
+PE-32,99.7,99.46,96.83
+PE-64,98.83,98.62,95.47
+ELF-32,97.84,97.63,94.18
+ELF-64,97.21,97.08,93.72
+BODMAS AUT,83.46,85.74,n/a

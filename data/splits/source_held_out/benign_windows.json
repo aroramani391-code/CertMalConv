@@ -1,0 +1,5 @@
+{
+  "protocol": "benign_source_held_out",
+  "training_source": "software_repositories",
+  "test_source": "windows_installations"
+}

@@ -1,0 +1,23 @@
+name: rewriting
+space: problem
+attacks:
+  - malguise:
+      reference: "X. Ling et al., 'A wolf in sheep’s clothing,' USENIX Sec. 2024."
+      max_sites: 8
+      max_bytes_per_site: 5
+      search: black_box_rl
+  - phantomcall:
+      reference: "M. A. Akil et al., 'PhantomCall,' arXiv:2609.00705, 2026."
+      injected_functions: 1
+      trampoline_bytes: 5
+  - malaoi:
+      reference: "H. Peng et al., 'MalAOI,' Sci. Rep. 15, 9174, 2025."
+      policy: ppo
+      opcode_pool: [nop, jmp, pushpop, test]
+sandbox:
+  engine: cuckoo
+  version: "2.0.7"
+  guest_image: windows10_x64_19045
+  timeout_seconds: 120
+  elf_engine: ubuntu_22_04_lisa
+preserve_functionality: true

@@ -1,0 +1,26 @@
+name: bodmas
+group: G1
+platform: PE-32
+malware_source: BODMAS
+benign_source: windows_and_repos
+reference: "L. Yang et al., 'BODMAS: An open dataset for learning based temporal analysis of PE malware,' IEEE SPW, 2021."
+url: https://whyisyoung.github.io/BODMAS/
+license: Academic request
+raw_path: ${oc.env:BODMAS_ROOT}
+cache_path: data/processed/bodmas
+manifest: data/manifests/bodmas_manifest.csv
+counts:
+  malware_raw: 20593
+  malware_dedup: 19842
+  benign_raw: 23098
+  benign_dedup: 22415
+splits:
+  standard: data/splits/standard/bodmas.json
+  temporal: data/splits/temporal/bodmas.json
+  family_aware: data/splits/family_aware/bodmas.json
+  near_duplicate_filtered: data/splits/near_duplicate_filtered/bodmas.json
+preprocessing:
+  parser: pefile
+  max_file_size_mb: null       # no cap (CertMalConv unlike DSMalConv)
+  unitize: true
+  tile_cache: lmdb

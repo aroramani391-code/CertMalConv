@@ -1,0 +1,13 @@
+{
+  "protocol": "near_duplicate_filtered",
+  "tlsh_distance_max": 30,
+  "jaccard_similarity_min": 0.9,
+  "surviving_test_sha256": [
+    "40b3dbb78218dada03ddef5275c4b470bb9497421a6f0ddafc81216cc9f5deab",
+    "9fc546288420a604437495126795c783205b903fc1b0ef5919d8b51891a457b1",
+    "052f8a4b62996264ae7602ebf865087ce11b6e0135dcd83068c84a0e243fc2aa",
+    "09b8c5ef1159fbb4d02b19bd9b81816ebf3118889184402c7b4d86582f5c59ce",
+    "a40063bd5141ae366d0aa70edb11e6b8bce518b3c85a85f595e99fec29d52bba",
+    "f4f5b722ac4e9d4475bcdba572c017a7c6c77352070bb6e697952235d7cbb898"
+  ]
+}

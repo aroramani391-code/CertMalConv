@@ -1,0 +1,5 @@
+# Per-experiment runtime options.
+seeds: [42, 123, 2024, 2025, 2026]
+batch_size: 16
+device: cuda:0
+output_dir: ../../results

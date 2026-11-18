@@ -1,0 +1,35 @@
+name: certification
+paper_tables: [VIII, XIV]
+paper_figures: [7, 12]
+datasets: [bodmas, sorel20m, virusshare_pe64, virusshare_elf32, virusshare_elf64]
+splits: [standard]
+seeds: [42, 123, 2024, 2025, 2026]
+
+cdr:
+  rho_values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  k_sweep: [1, 3, 5]
+  delta_bytes: 5     # trampoline size for s_delta*
+  edit_sites: [1, 2, 4]
+  append_sizes_kib: [1, 4, 16, 64]
+
+verification:
+  trials_per_family:
+    test_binaries_single_insertion: 2400
+    test_binaries_replacements: 2400
+    test_binaries_overlapping_zones: 1200
+    test_binaries_edits_at_cut_boundaries: 1800
+    test_binaries_append: 1200
+    random_bytes: 5000
+    adversarial_dense_cuts: 3000
+    planted_dense_segments: 2500
+  total_trials: 19500
+  compare_against: lemma3_bound
+  stop_on_violation: false
+
+output:
+  raw: results/certification/raw_${dataset}_seed${seed}.csv
+  summary: results/certification/summary.csv
+  verifier_log: results/certification/verifier_log.csv
+  tables:
+    - results/certification/table_viii.csv
+    - results/certification/table_xiv.csv

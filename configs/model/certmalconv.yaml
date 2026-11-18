@@ -1,0 +1,80 @@
+# CertMalConv — operational configuration (Table V of the paper)
+# All runs in the paper use these values unless noted otherwise.
+
+model:
+  name: certmalconv
+  version: "0.3.2"
+  d: 128                    # fusion / embedding dimension
+
+unitization:
+  algorithm: gear
+  window: 64                # ω, bytes
+  cut_bits: 11              # ℓ; mean unit length = 2^ℓ = 2048 B
+  min_unit: null            # no minimum (Section III-B)
+  max_unit: null            # no maximum
+  constant_run_guard: true
+  gear_table_seed: 0xC3A4B1E2   # fixed, reproducible
+
+tiling:
+  tile_size: 4096           # T, bytes
+  image_side: 64            # 64 × 64 grayscale patch
+  pad_value: 0
+
+byte_view:
+  arch: cnn3
+  blocks:
+    - { channels: 32, kernel: 3, stride: 1, padding: 1, pool: 2 }
+    - { channels: 64, kernel: 3, stride: 1, padding: 1, pool: 2 }
+    - { channels: 128, kernel: 3, stride: 1, padding: 1, pool: 2 }
+  global_pool: avg
+  head: linear
+  out_dim: 128
+
+structure_view:
+  decoder: linear_sweep
+  modes: [x86_32, x86_64]
+  attributes: 11            # MAGIC/DSMalConv block attributes
+  node_feat_in: 11
+  node_feat_hidden: 32
+  gnn:
+    type: gin
+    layers: 4
+    hidden: [32, 64, 128, 128]
+    dropout: 0.3
+    epsilon_learnable: true
+  readout: mean
+  head: linear
+  out_dim: 128
+
+fusion:
+  type: elementwise_gate
+  tile_pool: max
+  evidence_head:
+    type: linear
+    activation: sigmoid
+
+aggregation:
+  k: 3
+  rho_max: 8
+  theta_0: 1.5
+  margin: 0.1
+
+global_branch:
+  attention:
+    type: gated
+    hidden: 64
+  head:
+    type: linear
+    activation: sigmoid
+
+family_head:
+  input: top_k_units
+  k: 3
+  hidden: 128
+  energy_threshold_tpr: 0.95   # η tuned to accept 95% of known-family val malware
+
+calibration:
+  alpha_1: 0.0005            # 0.05 %
+  alpha_2: 0.0005
+  method: empirical_quantile
+  bootstrap_resamples: 100

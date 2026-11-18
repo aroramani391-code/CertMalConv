@@ -1,0 +1,11 @@
+name: snia
+space: feature
+targets: [acfg]
+budgets_pct: [1, 2, 5]
+num_injected_nodes_pct: 5
+num_steps: 40
+optimizer: adam
+lr: 0.01
+functionality_preserving: true
+seeds: [42, 123, 2024, 2025, 2026]
+reference: "D. Zapzalka, S. Salem, D. Mohaisen, 'Semantics-preserving node injection attacks against GNN-based ACFG malware classifiers,' IEEE TDSC 22(2), 2025."

@@ -1,0 +1,34 @@
+name: tur
+space: adaptive_white_box
+targets: [certmalconv]
+variants:
+  greedy_1run:
+    restarts: 1
+    search: greedy
+    budget_units: 8
+    rewrites: [instruction_substitution, register_reassignment, block_reorder]
+    insert_benign_units: true
+  greedy_5restarts:
+    restarts: 5
+    search: greedy
+    budget_units: 8
+  tur_opt_beam:
+    restarts: 5
+    search: beam
+    beam_width: 8
+    iterations: 40
+    loss: "max(S_k(x) / theta, g(x) / theta_g)"
+    budget_units: 8
+objective_branch_only:
+  - certified_path       # only S_k
+  - global_branch        # only g
+family_attack:
+  - untargeted
+  - targeted
+sandbox:
+  engine: cuckoo
+  version: "2.0.7"
+  guest_image: windows10_x64_19045
+  timeout_seconds: 120
+  elf_engine: ubuntu_22_04_lisa
+preserve_functionality: true

@@ -1,0 +1,48 @@
+# Training schedule for CertMalConv (Table V of the paper).
+defaults:
+  - _self_
+  - optimizer: adamw
+  - loss_config: certmalconv_loss
+
+run:
+  name: certmalconv_${dataset.name}_seed${seed}
+  output_dir: logs/${run.name}
+  checkpoint_dir: checkpoints/${run.name}
+  tensorboard: true
+  wandb:
+    enable: false
+    project: certmalconv
+    entity: null
+
+dataset:
+  name: bodmas             # one of {bodmas, sorel20m, virusshare_pe64, virusshare_elf32, virusshare_elf64}
+  split: standard
+  calibration_frac: 0.05
+
+training:
+  epochs: 60
+  batch_size: 16
+  grad_accum_steps: 1
+  mixed_precision: bf16
+  gradient_clip: 1.0
+  log_every_n_steps: 25
+  val_every_n_epochs: 1
+  save_every_n_epochs: 1
+  patience: 10
+  early_stop_metric: val_cdr_rhomax
+  select_checkpoint_by: val_cdr_rhomax
+
+radius_schedule:
+  rho_max: 8
+  warmup_epochs: 5
+  ramp_epochs: 25
+
+mining:
+  r_random_units: 8
+  recompute_only_selected: true
+
+seeds: [42, 123, 2024, 2025, 2026]
+seed: 42
+num_workers: 8
+pin_memory: true
+deterministic_cudnn: true

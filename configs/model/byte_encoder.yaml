@@ -1,0 +1,16 @@
+name: byte_encoder
+tile_size: 4096
+image_side: 64
+in_channels: 1
+blocks:
+  - { out_channels: 32, kernel: 3, stride: 1, padding: 1, pool: 2, bn: true, act: relu }
+  - { out_channels: 64, kernel: 3, stride: 1, padding: 1, pool: 2, bn: true, act: relu }
+  - { out_channels: 128, kernel: 3, stride: 1, padding: 1, pool: 2, bn: true, act: relu }
+global_pool: adaptive_avg
+head:
+  type: linear
+  out_dim: 128
+init:
+  weight: kaiming_normal_
+  bias: zeros_
+param_count: 264_320

@@ -1,0 +1,19 @@
+name: structure_encoder
+decoder: linear_sweep
+modes: [x86_32, x86_64]
+attributes: 11
+node_feature_input: 11
+node_feature_hidden: 32
+gin:
+  layers: 4
+  hidden: [32, 64, 128, 128]
+  epsilon_learnable: true
+  mlp_hidden: 128
+  dropout: 0.3
+  batch_norm: true
+  readout: mean
+head:
+  type: linear
+  in_dim: 256          # concat of 128-dim readouts across the two modes
+  out_dim: 128
+param_count: 394_112

@@ -1,0 +1,24 @@
+name: sorel20m
+group: G2
+platform: PE-32
+malware_source: SOREL-20M
+benign_source: windows_and_repos
+reference: "R. Harang and E. M. Rudd, 'SOREL-20M: A large scale benchmark dataset for malicious PE detection,' arXiv:2012.07634, 2020."
+url: https://github.com/sophos/SOREL-20M
+license: Apache-2.0
+raw_path: ${oc.env:SOREL_ROOT}
+cache_path: data/processed/sorel20m
+manifest: data/manifests/sorel20m_manifest.csv
+counts:
+  malware_raw: 7737
+  malware_dedup: 7513
+  benign_raw: 9850
+  benign_dedup: 9647
+splits:
+  standard: data/splits/standard/sorel20m.json
+preprocessing:
+  parser: pefile
+  disarmed_machine_field: true     # SOREL zeros machine field; use dual-mode decoder
+  max_file_size_mb: null
+  unitize: true
+  tile_cache: lmdb

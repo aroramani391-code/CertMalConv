@@ -1,0 +1,17 @@
+name: efficiency
+paper_tables: [XI]
+paper_figures: [9]
+devices:
+  - { type: gpu, model: A100-SXM4, mem_gb: 40 }
+  - { type: cpu, model: Intel Xeon, cores: 1, freq_ghz: 2.20 }
+file_size_sweep_kib: [64, 256, 1024, 4096, 16384, 65536]
+early_exit:
+  enable: true
+  check_interval_units: 1
+num_trials_per_point: 25
+warmup_trials: 5
+output:
+  raw: results/efficiency/raw.csv
+  summary: results/efficiency/summary.csv
+  table: results/efficiency/table_xi.csv
+  latency_curve: results/efficiency/latency_curve.csv

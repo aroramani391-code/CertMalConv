@@ -1,0 +1,21 @@
+name: generalization
+paper_tables: [XII]
+platform_split:
+  train: [PE-32, PE-64, ELF-32]
+  test:  [ELF-64]
+  rotations: 4             # one rotation per held-out platform
+temporal_split:
+  dataset: bodmas
+  train_months: ["2019-08", "2019-09", "2019-10", "2019-11", "2019-12", "2020-01"]
+  validation_months: ["2020-02"]
+  test_months: ["2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09"]
+  protocol: TESSERACT
+seeds: [42, 123, 2024, 2025, 2026]
+metrics:
+  - held_out_f1
+  - aut
+  - monthly_f1
+output:
+  raw: results/generalization/raw.csv
+  summary: results/generalization/summary.csv
+  table: results/generalization/table_xii.csv

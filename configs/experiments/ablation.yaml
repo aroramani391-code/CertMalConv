@@ -1,0 +1,24 @@
+name: ablation
+paper_tables: [XIII]
+paper_figures: [10]
+dataset: bodmas
+variants:
+  - { id: wo_byte_view,     disable: [byte_view] }
+  - { id: wo_structure_view, disable: [structure_view] }
+  - { id: concat_fusion,     fusion_type: concat }
+  - { id: single_mode,       structure_modes: [x86_64] }
+  - { id: bce_sk,            loss: bce_on_s_k }
+  - { id: fixed_chunks,      unitization: fixed, chunk_bytes: 2048 }
+  - { id: cdc_minmax,        unitization: gear_with_min_max, min_unit: 1024, max_unit: 4096 }
+  - { id: wo_global,         disable: [global_branch] }
+  - { id: wo_hard_mining,    mining: {r_random_units: 0, recompute_only_selected: false} }
+  - { id: full,              disable: [] }
+sensitivity:
+  k_values: [1, 2, 3, 4, 5]
+  cut_bits_values: [9, 10, 11, 12, 13]
+seeds: [42, 123, 2024, 2025, 2026]
+output:
+  raw: results/ablation/raw.csv
+  summary: results/ablation/summary.csv
+  table: results/ablation/table_xiii.csv
+  sensitivity_grid: results/ablation/sensitivity_grid.csv

@@ -1,0 +1,64 @@
+# VirusShare ELF-32 / ELF-64 groups (G4, G5) + VirusShare PE-64 (G3).
+# Three sub-configurations behind one file; select with ${group}.
+_defaults_: {}
+
+virusshare_pe64:
+  name: virusshare_pe64
+  group: G3
+  platform: PE-64
+  malware_source: VirusShare
+  benign_source: windows_and_repos
+  reference: "VirusShare, https://virusshare.com"
+  url: https://virusshare.com
+  license: Academic request
+  raw_path: ${oc.env:VIRUSSHARE_ROOT}/pe64
+  cache_path: data/processed/virusshare_pe64
+  manifest: data/manifests/virusshare_pe64_manifest.csv
+  counts:
+    malware_raw: 4000
+    malware_dedup: 3872
+    benign_raw: 4990
+    benign_dedup: 4881
+  splits:
+    standard: data/splits/standard/virusshare_pe64.json
+
+virusshare_elf32:
+  name: virusshare_elf32
+  group: G4
+  platform: ELF-32
+  malware_source: VirusShare
+  benign_source: SymLM
+  reference: "X. Jin et al., 'SymLM: ...,' ACM CCS 2022."
+  url: https://github.com/OSUSecLab/SymLM
+  license: MIT (benign), restricted (malware)
+  raw_path: ${oc.env:VIRUSSHARE_ROOT}/elf32
+  cache_path: data/processed/virusshare_elf32
+  manifest: data/manifests/virusshare_elf32_manifest.csv
+  counts:
+    malware_raw: 7843
+    malware_dedup: 7618
+    benign_raw: 10939
+    benign_dedup: 10712
+  splits:
+    standard: data/splits/standard/virusshare_elf32.json
+    platform_held_out: data/splits/source_held_out/platform_elf32.json
+
+virusshare_elf64:
+  name: virusshare_elf64
+  group: G5
+  platform: ELF-64
+  malware_source: VirusShare
+  benign_source: SymLM
+  reference: "X. Jin et al., 'SymLM: ...,' ACM CCS 2022."
+  url: https://github.com/OSUSecLab/SymLM
+  license: MIT (benign), restricted (malware)
+  raw_path: ${oc.env:VIRUSSHARE_ROOT}/elf64
+  cache_path: data/processed/virusshare_elf64
+  manifest: data/manifests/virusshare_elf64_manifest.csv
+  counts:
+    malware_raw: 1187
+    malware_dedup: 1154
+    benign_raw: 1193
+    benign_dedup: 1168
+  splits:
+    standard: data/splits/standard/virusshare_elf64.json

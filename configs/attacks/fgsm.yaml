@@ -1,0 +1,12 @@
+name: fgsm
+space: feature
+targets: [byte_patch]
+budgets_pct: [1, 5, 10]
+num_steps: 1
+loss: cross_entropy
+targeted: false
+clip_min: 0.0
+clip_max: 1.0
+seeds: [42, 123, 2024, 2025, 2026]
+num_samples: full_test_set
+reference: "I. J. Goodfellow, J. Shlens, C. Szegedy, ICLR 2015."

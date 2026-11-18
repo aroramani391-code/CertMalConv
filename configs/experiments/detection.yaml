@@ -1,0 +1,26 @@
+name: detection
+paper_tables: [VI, VII]
+paper_figures: [6]
+datasets: [bodmas, sorel20m, virusshare_elf32]
+splits: [standard]
+seeds: [42, 123, 2024, 2025, 2026]
+operating_points:
+  - { name: default, threshold: calibrated }
+  - { name: fpr_1pct, fpr_target: 0.01 }
+  - { name: fpr_0_1pct, fpr_target: 0.001 }
+metrics:
+  - acc
+  - precision
+  - recall
+  - f1
+  - auc
+  - tpr_at_1pct_fpr
+  - tpr_at_0_1pct_fpr
+  - balanced_accuracy
+output:
+  raw: results/detection/raw_${dataset}_seed${seed}.csv
+  summary: results/detection/summary.csv
+  tables:
+    - results/detection/table_vi.csv
+    - results/detection/table_vii.csv
+  roc_data: results/detection/roc_curves.csv

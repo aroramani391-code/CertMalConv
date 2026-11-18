@@ -1,0 +1,16 @@
+name: insertion
+space: problem
+family: [full_dos, extend, shift]
+payload_sizes_kib: [1, 4, 16, 64]
+optimizer: genetic
+population: 32
+iterations: 50
+crossover: 0.6
+mutation: 0.1
+preserve_functionality: true
+sandbox:
+  engine: cuckoo
+  version: "2.0.7"
+  guest_image: windows10_x64_19045
+  timeout_seconds: 120
+reference: "L. Demetrio et al., 'Adversarial EXEmples,' ACM TOPS 24(4), 2021."

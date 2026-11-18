@@ -1,0 +1,12 @@
+name: certmalconv_loss
+cert:
+  theta_0: 1.5
+  margin: 0.1
+  weight: 1.0
+global_branch:
+  focal_gamma: 2.0
+  weight: 0.5
+family_head:
+  type: cross_entropy
+  label_smoothing: 0.0
+  weight: 0.3

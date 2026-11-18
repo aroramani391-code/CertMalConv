@@ -1,0 +1,17 @@
+name: family_classification
+paper_tables: [X]
+dataset: bodmas
+split: family_aware
+seeds: [42, 123, 2024, 2025, 2026]
+known_families_min_train_samples: 20
+energy_threshold_calibration: {target_tpr_known: 0.95, on: validation}
+metrics:
+  - accuracy
+  - macro_f1
+  - unknown_auroc
+  - known_tpr
+  - per_family_f1
+output:
+  raw: results/family_classification/raw_seed${seed}.csv
+  summary: results/family_classification/summary.csv
+  table: results/family_classification/table_x.csv
